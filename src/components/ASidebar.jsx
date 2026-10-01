@@ -7,7 +7,7 @@ import {
 } from "../libs/utils";
 import ContactAvatar from "./ContactAvatar";
 
-export default function Sidebar({
+export default function ASidebar({
   chats,
   activeChatId,
   credentials,
@@ -22,7 +22,7 @@ export default function Sidebar({
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (inputError) setInputError("");
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phoneNumber]);
 
   const handleSubmit = async (e) => {
@@ -69,7 +69,7 @@ export default function Sidebar({
         contactInfo,
         fallbackPhone: normalized,
       });
-      
+
       const messages = mapHistoryToMessages(history);
 
       onCreateChat({
