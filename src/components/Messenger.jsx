@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import Sidebar from "./Sidebar";
+import ASidebar from "./ASidebar.jsx";
 import ChatArea from "./ChatArea";
 import { useIsMobile } from "../hooks/useMediaQuery";
 import {
@@ -216,7 +216,7 @@ export default function Messenger({ credentials, onLogout }) {
             ...(isMobile ? styles.sidebarMobile : {}),
           }}
         >
-          <Sidebar
+          <ASidebar
             chats={chats}
             activeChatId={activeChatId}
             credentials={credentials}
